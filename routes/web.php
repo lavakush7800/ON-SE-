@@ -18,3 +18,15 @@ Route::get('/', function () {
 });
 
 Route::get('employee','Crud\EmployeeController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
