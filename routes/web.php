@@ -18,15 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('employee','Crud\EmployeeController@index');
+Route::post('save','Crud\EmployeeController@store');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

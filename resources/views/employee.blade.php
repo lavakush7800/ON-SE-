@@ -3,7 +3,8 @@
 @section('content')
 <div class="container">
   <center><h2>Employee Details</h2></center>
-  <form action="/action_page.php">
+  <form method="post" action="save">
+      @csrf
   <div class="form-group">
       <label for="image">Image:</label>
       <input type="file" class="form-control" id="image" placeholder="Enter image" name="pswd">
