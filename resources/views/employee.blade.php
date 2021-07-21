@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
   <center><h2>Employee Details</h2></center>
-  <form method="post" action="save">
+  <form method="post" action="save" enctype="multipart/form-data">
       @csrf
   <div class="form-group">
       <label for="image">Image:</label>

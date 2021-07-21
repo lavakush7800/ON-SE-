@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::get('employee','Crud\EmployeeController@index');
 Route::post('save','Crud\EmployeeController@store');
+Route::get('employeeShow','Crud\EmployeeController@show');
 
 Auth::routes();
 

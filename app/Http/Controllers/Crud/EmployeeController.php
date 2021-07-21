@@ -16,7 +16,15 @@ class EmployeeController extends Controller
             $data = $request->all();
             // dd($data);
             $result = Employee::get($data);
-            return redirect('employee');
+            return redirect('employee',['data'=>$result]);
+        }catch(\Exception $e){
+
+        }
+    }
+    public function show(){
+        try{
+            $results = Employee::show();
+            return view('employeeShow', compact('results'));
         }catch(\Exception $e){
 
         }

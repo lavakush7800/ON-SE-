@@ -34,7 +34,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                     <li><a href="employee">Employee</a></li>
-
+                    <li><a href="employeeShow">Employee Data</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

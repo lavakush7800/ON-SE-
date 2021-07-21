@@ -19,5 +19,18 @@ class Employee{
             Log::error($e);
         }
     }
+    
+    public static function show():array{
+        try{
+            $data = Model::all();
+            if($data){
+                return $data->toArray();
+            }else{
+                return [];
+            }
+        }catch(\Exception $e){
+            Log::error($e);
+        }
+    }
 
 }
