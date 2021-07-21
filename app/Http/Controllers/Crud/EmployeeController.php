@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Crud;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Lib\Crud\Employee;
 
 class EmployeeController extends Controller
 {
@@ -13,7 +14,7 @@ class EmployeeController extends Controller
     public function store(Request $request){
         try{
             $data = $request->all();
-            dd($data);
+            // dd($data);
             $result = Employee::get($data);
             return redirect('employee');
         }catch(\Exception $e){
