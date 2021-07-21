@@ -5,11 +5,16 @@ use App\Models\Employee as Model;
 use Illuminate\Support\Facades\Log;
 
 class Employee{
-    public static function get(array $data){
+    public static function get(array $data):array{
         try{
             // dd($data);
             $result = Model::create($data);
-            return $result;
+            // dd($result);
+            if($result){
+                return $result->toArray();
+            }else{
+                return [];
+            }
         }catch(\Exception $e){
             Log::error($e);
         }

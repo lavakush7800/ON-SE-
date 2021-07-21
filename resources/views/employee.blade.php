@@ -7,7 +7,7 @@
       @csrf
   <div class="form-group">
       <label for="image">Image:</label>
-      <input type="file" class="form-control" id="image" placeholder="Enter image" name="pswd">
+      <input type="file" class="form-control" id="image" placeholder="Enter image" name="image">
     </div>
     <div class="form-group">
       <label for="name">Name:</label>
