@@ -14,7 +14,9 @@ class EmployeeController extends Controller
     public function store(Request $request){
         try{
             $data = $request->all();
-            // dd($data);
+            $fname = $request->image->store('/public');
+            // dd($fname);
+            $data['image'] =$fname;
             $result = Employee::get($data);
             return redirect('employee',['data'=>$result]);
         }catch(\Exception $e){

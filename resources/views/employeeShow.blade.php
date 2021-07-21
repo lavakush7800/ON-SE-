@@ -16,7 +16,7 @@
     @foreach($results as $data)
       <tr>
         <td>{{ $data['id'] }}</td>
-        <td>{{ $data['image'] }}</td>
+        <td><img src='<?php echo "/storage/".str_replace('public/','',$data['image']); ?>' width="80" /></td>
         <td>{{ $data['name'] }}</td>
       </tr>
     @endforeach
