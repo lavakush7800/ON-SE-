@@ -22,9 +22,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="/home">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     LSKart
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -39,21 +39,6 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                           <li class="nav-item">
-                                <a class="nav-link" href="/home">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="book_show">Book</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/author">Authors</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/category">Category</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/publisher">Publisher</a>
-                            </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -65,6 +50,12 @@
                                 </li>
                             @endif
                         @else
+                        <li>
+                           <a class="nav-link" href="/user">Home</a>
+                        </li>
+                        <li>
+                           <a class="nav-link" href="/user">Book</a>
+                        </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -82,6 +73,9 @@
                                     </form>
                                 </div>
                             </li>
+                            <li class="nav-item">
+                                    <a class="nav-link" href="/cart" action="">Cart</a>
+                            </li>
                         @endguest
                     </ul>
                 </div>
@@ -90,7 +84,21 @@
 
         <main class="py-4">
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.2.0/mdb.min.css"
+  rel="stylesheet"
+/>
             @yield('content')
         </main>
     </div>
